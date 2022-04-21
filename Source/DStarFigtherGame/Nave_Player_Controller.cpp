@@ -16,22 +16,24 @@ void ANave_Player_Controller::BeginPlay()
 {
 
 	TArray<AActor*> CameraActors;
+
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACameraActor::StaticClass(), CameraActors);
 
 	FViewTargetTransitionParams Params;
-	SetViewTarget(CameraActors[0], Params);
 
+	SetViewTarget(CameraActors[0], Params);
 
 }
 
 void ANave_Player_Controller::SetupInputComponent()
 {
 	Super::SetupInputComponent();
-
+	
 	EnableInput(this);
 
 	InputComponent->BindAxis("MoveHorizontal", this, &ANave_Player_Controller::MoveHorizontal);
 	InputComponent->BindAxis("MoveVertical", this, &ANave_Player_Controller::MoveVertical);
+
 }
 
 void ANave_Player_Controller::MoveHorizontal(float AxisValue1)
@@ -39,7 +41,7 @@ void ANave_Player_Controller::MoveHorizontal(float AxisValue1)
 	auto MyPawn = Cast<ANaveJugador>(GetPawn());
 
 	if (MyPawn) {
-
+		
 		MyPawn->MoveHorizontal(AxisValue1);
 
 	}

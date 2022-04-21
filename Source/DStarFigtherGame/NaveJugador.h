@@ -21,12 +21,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
-	/*UPROPERY sirve para especificar como se comporta la propiedad con varios aspectos del motor y editor*/
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UStaticMeshComponent* SM_NaveJugador;
 
-	//UStaticMeshComponent se utiliza para crear una instancia de UStaticMesh. Una Malla estática es una pieza de geometría que consta de un conjunto estático de polígonos
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 		UFloatingPawnMovement* FloatingMovement;
@@ -37,7 +35,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override; //Abstracto
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void MoveHorizontal(float AxisValue1);
 

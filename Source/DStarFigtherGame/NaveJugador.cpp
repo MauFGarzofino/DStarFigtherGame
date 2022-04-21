@@ -19,7 +19,8 @@ ANaveJugador::ANaveJugador()
 
 	SM_NaveJugador->SetEnableGravity(false); //Para que el objeto no se vaya para abajo por la f de la gravedad
 	SM_NaveJugador->SetConstraintMode(EDOFMode::XZPlane); //Que solo trabaja en los ejes X Z del plano
-	SM_NaveJugador->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics); //La nave, asuma el modo de restricción, controlando las condiciones físicas(se agregan por sí solas) y las del lugar(Hay que agregarlas)
+	SM_NaveJugador->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics); /*La nave, asuma el modo de restricción,
+	controlando las condiciones físicas(se agregan por sí solas) y las del lugar(Hay que agregarlas)*/
 	SM_NaveJugador->SetCollisionProfileName(TEXT("PhisicActor")); // Le damos un nombre a esta configuración de colisión
 
 	// Todo eso lo necesito para que la nave aparezca en el unreal, pueda modificarlo
