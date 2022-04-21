@@ -30,7 +30,6 @@ void ANave_Player_Controller::SetupInputComponent()
 	Super::SetupInputComponent();
 	
 	EnableInput(this);
-
 	InputComponent->BindAxis("MoveHorizontal", this, &ANave_Player_Controller::MoveHorizontal);
 	InputComponent->BindAxis("MoveVertical", this, &ANave_Player_Controller::MoveVertical);
 

@@ -21,7 +21,7 @@ class DSTARFIGTHERGAME_API ANave_Player_Controller : public APlayerController
 
 protected:
 
-
+ 
 	virtual void BeginPlay() override;
 
 	void MoveHorizontal(float AxisValue1);
