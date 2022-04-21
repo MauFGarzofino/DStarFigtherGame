@@ -54,10 +54,8 @@ void ANaveJugador::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ANaveJugador::MoveHorizontal(float AxisValue1)
 {
-	//Lamma al método AddMovementInput , que agregue a las entradas del objeto que éstá captando 'pawn'
+	
 	AddMovementInput(FVector(AxisValue1, 0.0f, 0.0f), 1.0f, false);
-	//Sin escala (1.0) y false porque no queremos forzar nada
-	//Crea un vector con el valor que le pasaremos en el  eje X
 }
 
 void ANaveJugador::MoveVertical(float AxisValue2)
